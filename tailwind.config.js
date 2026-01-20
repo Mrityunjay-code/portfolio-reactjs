@@ -40,8 +40,8 @@ export default {
         }
       },
       backgroundImage: {
-        'gradient-primary': 'linear-gradient(135deg, #06B6D4 0%, #3B82F6 100%)', // Cyan to Blue
-        'gradient-glow': 'radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(11,17,33,0) 70%)',
+        'gradient-primary': 'linear-gradient(135deg, rgb(var(--secondary)) 0%, rgb(var(--primary)) 100%)', // Dynamic based on theme
+        'gradient-glow': 'radial-gradient(circle, rgb(var(--primary) / 0.15) 0%, rgb(var(--background) / 0) 70%)',
       }
     },
   },

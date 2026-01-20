@@ -6,33 +6,49 @@ const projects = [
     title: "MH Deliveries", 
     desc: "Built a delivery management platform with real-time order tracking, rider assignment, and role-based authentication using the MERN stack. Implemented scalable REST APIs and real-time updates with Socket.io, contributing to a 40% increase in daily completed deliveries.",
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io"],
-    image: "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&q=80&w=1000",
     link: "#",
-    github: "#"
+    github: "#",
+    color: "from-blue-400 to-cyan-400"
   },
   { 
     title: "NIET CGE Website", 
     desc: "Developed an SEO-optimized, high-performance academic website using Next.js with SSR and responsive UI components. Improved page load speed and Core Web Vitals through image optimization, lazy loading, and performance tuning.",
     tech: ["React.js", "Next.js", "Tailwind CSS"],
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1000",
     link: "#",
-    github: "#"
+    github: "#",
+    color: "from-purple-400 to-pink-400"
   },
   { 
     title: "2PointOh", 
     desc: "Maintained and enhanced a live Shopify e-commerce website by implementing product catalog improvements, custom theme updates, and Liquid integrations to improve UX and performance.",
     tech: ["Shopify", "Liquid", "JavaScript"],
-    image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=1000",
     link: "#",
-    github: "#"
+    github: "#",
+    color: "from-orange-400 to-red-400"
   },
   { 
     title: "NIET Website", 
     desc: "Maintained and updated a high-traffic institutional website by implementing UI changes, content updates, and performance optimizations to ensure reliability and responsiveness.",
     tech: ["PHP", "SQL"],
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=1000",
     link: "#",
-    github: "#"
+    github: "#",
+    color: "from-green-400 to-emerald-400"
+  },
+  { 
+    title: "Pub Hoppers", 
+    desc: "Club membership and QR-based entry system. Applied secure JWT login with role-based access, used SSR for faster page loads, and integrated real-time QR scanning for entry validation.",
+    tech: ["React.js", "Next.js", "Tailwind CSS"],
+    link: "#",
+    github: "#",
+    color: "from-indigo-400 to-blue-400"
+  },
+  { 
+    title: "Ashiana Housing", 
+    desc: "A premium real estate platform showcasing residential properties across 7 cities. Features include advanced property filtering, detailed project showcases, and a seamless user inquiry system for senior living and kid-centric homes.",
+    tech: ["Web Development", "UI/UX Design"],
+    link: "https://www.ashianahousing.com/",
+    github: "#",
+    color: "from-teal-400 to-emerald-400"
   },
 ];
 
@@ -55,13 +71,12 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, i) => (
             <div key={i} className="group relative bg-surface border border-gray-200 dark:border-white/10 rounded-3xl overflow-hidden hover:border-primary/50 transition-all duration-300 shadow-sm dark:shadow-none">
-              {/* Image */}
-              <div className="aspect-video overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+              {/* Project Banner (Text Placeholder) */}
+              <div className="aspect-video relative overflow-hidden bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/10 flex items-center justify-center p-6 group-hover:bg-primary/10 transition-colors duration-500">
+                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20" />
+                <h3 className={`text-3xl md:text-4xl font-display font-bold text-center text-transparent bg-clip-text bg-gradient-to-r ${project.color} group-hover:scale-105 transition-transform duration-500 relative z-10`}>
+                  {project.title}
+                </h3>
               </div>
               
               {/* Content */}

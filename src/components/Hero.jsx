@@ -22,7 +22,7 @@ const Hero = ({ openResume }) => {
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 leading-[1.1] text-foreground">
             Building digital <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">experiences that matter.</span>
+            <span className="text-gradient">experiences that matter.</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
