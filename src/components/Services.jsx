@@ -67,7 +67,7 @@ const Services = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative p-8 rounded-3xl bg-surface border border-white/10 hover:border-primary/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/5"
+                className="group relative p-8 rounded-3xl bg-surface border border-gray-200 dark:border-white/10 hover:border-primary/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/5"
               >
                 {/* Hover Gradient Border Effect */}
                 <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
@@ -78,8 +78,8 @@ const Services = () => {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">{service.title}</h3>
-                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors text-foreground">{service.title}</h3>
+                <p className="text-muted text-sm leading-relaxed">
                   {service.desc}
                 </p>
               </motion.div>

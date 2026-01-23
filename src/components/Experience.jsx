@@ -77,7 +77,7 @@ const Experience = () => {
                             {/* Dot */}
                             <div className="absolute top-2 -left-[9px] w-4 h-4 rounded-full bg-background border-4 border-primary group-hover:scale-125 transition-transform duration-300" />
                             
-                            <div className="p-6 bg-surface border border-white/5 rounded-2xl hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5">
+                            <div className="p-6 bg-surface border border-gray-200 dark:border-white/5 rounded-2xl hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5">
                                 <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-4">
                                     {exp.period}
                                 </span>
@@ -86,7 +86,7 @@ const Experience = () => {
                                 <p className="text-sm text-muted mb-4 flex items-center gap-1">
                                     <MapPin className="w-3 h-3" /> {exp.location}
                                 </p>
-                                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                                <p className="text-muted text-sm leading-relaxed">
                                     {exp.desc}
                                 </p>
                             </div>
@@ -122,7 +122,7 @@ const Experience = () => {
                              {/* Dot */}
                              <div className="absolute top-2 -left-[9px] w-4 h-4 rounded-full bg-background border-4 border-secondary group-hover:scale-125 transition-transform duration-300" />
                             
-                            <div className="p-6 bg-surface border border-white/5 rounded-2xl hover:border-secondary/30 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/5">
+                            <div className="p-6 bg-surface border border-gray-200 dark:border-white/5 rounded-2xl hover:border-secondary/30 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/5">
                                 <span className="inline-block px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-bold mb-4">
                                     {edu.period}
                                 </span>
@@ -131,7 +131,7 @@ const Experience = () => {
                                 <p className="text-sm text-muted mb-4 flex items-center gap-1">
                                     <MapPin className="w-3 h-3" /> {edu.location}
                                 </p>
-                                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                                <p className="text-muted text-sm leading-relaxed">
                                     {edu.desc}
                                 </p>
                             </div>

@@ -22,7 +22,7 @@ export default {
         accent: {
           DEFAULT: '#8B5CF6', 
         },
-        muted: '#94A3B8',
+        muted: 'rgb(var(--muted) / <alpha-value>)',
       },
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],

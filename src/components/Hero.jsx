@@ -25,7 +25,7 @@ const Hero = ({ openResume }) => {
             <span className="text-gradient">experiences that matter.</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted max-w-2xl mx-auto mb-12 leading-relaxed">
             I'm <span className="text-foreground font-semibold">Mrityunjay Kumar</span>, a Full Stack Developer specializing in building exceptional digital products with modern technologies.
           </p>
 
@@ -37,7 +37,7 @@ const Hero = ({ openResume }) => {
             
             <button 
               onClick={openResume}
-              className="w-full sm:w-auto px-8 py-4 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-full text-foreground font-bold text-lg hover:bg-gray-200 dark:hover:bg-white/10 transition-all flex items-center justify-center gap-2 backdrop-blur-sm"
+              className="w-full sm:w-auto px-8 py-4 bg-surface dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-full text-foreground font-bold text-lg hover:bg-gray-100 dark:hover:bg-white/10 transition-all flex items-center justify-center gap-2 backdrop-blur-sm shadow-sm dark:shadow-none"
             >
               <Download className="w-5 h-5" />
               Download Resume

@@ -25,7 +25,7 @@ const Skills = () => {
         {[...skills, ...skills].map((skill, index) => (
           <div 
             key={index}
-            className="flex items-center gap-3 px-6 py-3 rounded-full bg-surface border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-300 font-medium hover:text-primary dark:hover:text-white hover:border-primary/50 transition-colors cursor-default group"
+            className="flex items-center gap-3 px-6 py-3 rounded-full bg-surface border border-gray-200 dark:border-white/10 text-muted font-medium hover:text-primary dark:hover:text-white hover:border-primary/50 transition-colors cursor-default group"
           >
             <img 
               src={skill.logo} 

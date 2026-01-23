@@ -59,7 +59,7 @@ const Projects = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Featured Projects</h2>
-            <p className="text-gray-600 dark:text-gray-400 text-lg">
+            <p className="text-muted text-lg">
               A selection of projects that showcase my skills in design and development.
             </p>
           </div>
@@ -93,7 +93,9 @@ const Projects = () => {
                   </div>
                 </div>
                 
-                <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+
+                
+                <p className="text-muted mb-6 leading-relaxed">
                   {project.desc}
                 </p>
 

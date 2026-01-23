@@ -49,7 +49,7 @@ const Contact = () => {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="glass-card rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+          <div className="glass-card rounded-3xl overflow-hidden shadow-2xl border border-gray-200 dark:border-white/10">
             <div className="grid grid-cols-1 lg:grid-cols-2">
               
               {/* Left Side: Animated Visuals */}
@@ -149,7 +149,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full pl-12 pr-4 py-3 rounded-xl bg-background border border-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-muted/50"
+                        className="w-full pl-12 pr-4 py-3 rounded-xl bg-background border border-gray-200 dark:border-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-muted/50 text-foreground"
                         placeholder="John Doe"
                       />
                     </div>
@@ -166,7 +166,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full pl-12 pr-4 py-3 rounded-xl bg-background border border-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-muted/50"
+                        className="w-full pl-12 pr-4 py-3 rounded-xl bg-background border border-gray-200 dark:border-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-muted/50 text-foreground"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -183,7 +183,7 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         rows="4"
-                        className="w-full pl-12 pr-4 py-3 rounded-xl bg-background border border-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none placeholder:text-muted/50"
+                        className="w-full pl-12 pr-4 py-3 rounded-xl bg-background border border-gray-200 dark:border-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none placeholder:text-muted/50 text-foreground"
                         placeholder="How can I help you?"
                       />
                     </div>

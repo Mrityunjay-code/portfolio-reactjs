@@ -38,7 +38,7 @@ const FAQ = () => {
                 className="w-full flex items-center justify-between p-6 text-left"
                 onClick={() => setOpenIndex(index === openIndex ? -1 : index)}
               >
-                <span className="font-bold text-lg md:text-xl text-gray-200">{faq.question}</span>
+                <span className="font-bold text-lg md:text-xl text-gray-400">{faq.question}</span>
                 {openIndex === index ? 
                   <Minus className="text-primary w-6 h-6" /> : 
                   <Plus className="text-gray-400 w-6 h-6" />
