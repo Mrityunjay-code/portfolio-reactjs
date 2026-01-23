@@ -15,11 +15,11 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               {[
-                { Icon: Github, href: "https://github.com/mrityunjay-code" },
-                { Icon: Linkedin, href: "https://www.linkedin.com/in/mrityunjay-kumar-/" },
+                { Icon: Github, href: "https://github.com/mrityunjay-code", label: "GitHub" },
+                { Icon: Linkedin, href: "https://www.linkedin.com/in/mrityunjay-kumar-/", label: "LinkedIn" },
               
-              ].map(({ Icon, href }, i) => (
-                <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-surface border border-gray-200 dark:border-white/10 flex items-center justify-center text-muted hover:text-primary hover:bg-primary/20 hover:border-primary/50 transition-all">
+              ].map(({ Icon, href, label }, i) => (
+                <a key={i} href={href} aria-label={label} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-surface border border-gray-200 dark:border-white/10 flex items-center justify-center text-muted hover:text-primary hover:bg-primary/20 hover:border-primary/50 transition-all">
                   <Icon className="w-5 h-5" />
                 </a>
               ))}

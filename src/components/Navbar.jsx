@@ -123,8 +123,8 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <a href="#" className="text-gray-500 dark:text-gray-400 hover:text-foreground dark:hover:text-white transition-colors"><Github className="w-5 h-5" /></a>
-            <a href="#" className="text-gray-500 dark:text-gray-400 hover:text-foreground dark:hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></a>
+            <a href="#" className="text-gray-500 dark:text-gray-400 hover:text-foreground dark:hover:text-white transition-colors" aria-label="Github"><Github className="w-5 h-5" /></a>
+            <a href="#" className="text-gray-500 dark:text-gray-400 hover:text-foreground dark:hover:text-white transition-colors" aria-label="LinkedIn"><Linkedin className="w-5 h-5" /></a>
           </div>
           <button className="bg-gradient-primary px-6 py-2.5 rounded-full text-white font-semibold text-sm hover:opacity-90 transition-opacity ml-4 shadow-lg shadow-primary/25">
             Hire Me
@@ -137,6 +137,7 @@ const Navbar = () => {
            <button 
               onClick={() => setShowColorPicker(!showColorPicker)}
               className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 text-foreground transition-colors"
+              aria-label="Color Palette"
             >
               <div className="w-5 h-5 rounded-full bg-gradient-to-tr from-primary to-secondary" />
             </button>
@@ -146,11 +147,12 @@ const Navbar = () => {
             <button 
               onClick={toggleTheme} 
               className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 text-foreground transition-colors"
+              aria-label="Toggle Theme"
             >
               {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
             
-          <button className="text-foreground" onClick={() => setIsOpen(!isOpen)}>
+          <button className="text-foreground" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
             {isOpen ? <X /> : <Menu />}
           </button>
         </div>
@@ -191,9 +193,9 @@ const Navbar = () => {
             </div>
 
             <div className="flex gap-6 pt-4 border-t border-gray-200 dark:border-white/10">
-              <a href="#" className="text-gray-500 dark:text-gray-400 hover:text-foreground dark:hover:text-white"><Github className="w-6 h-6" /></a>
-              <a href="#" className="text-gray-500 dark:text-gray-400 hover:text-foreground dark:hover:text-white"><Linkedin className="w-6 h-6" /></a>
-              <a href="#" className="text-gray-500 dark:text-gray-400 hover:text-foreground dark:hover:text-white"><Mail className="w-6 h-6" /></a>
+              <a href="#" className="text-gray-500 dark:text-gray-400 hover:text-foreground dark:hover:text-white" aria-label="Github"><Github className="w-6 h-6" /></a>
+              <a href="#" className="text-gray-500 dark:text-gray-400 hover:text-foreground dark:hover:text-white" aria-label="LinkedIn"><Linkedin className="w-6 h-6" /></a>
+              <a href="#" className="text-gray-500 dark:text-gray-400 hover:text-foreground dark:hover:text-white" aria-label="Email"><Mail className="w-6 h-6" /></a>
             </div>
             <button className="w-full bg-gradient-primary py-3 rounded-xl text-white font-bold mt-2 shadow-lg shadow-primary/25">
               Hire Me

@@ -13,7 +13,7 @@ const Hero = ({ openResume }) => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 mb-8 backdrop-blur-md hover:bg-gray-200 dark:hover:bg-white/10 transition-colors cursor-default">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
@@ -30,13 +30,14 @@ const Hero = ({ openResume }) => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="w-full sm:w-auto px-8 py-4 bg-gradient-primary rounded-full text-white font-bold text-lg hover:opacity-90 transition-all flex items-center justify-center gap-2 group shadow-lg shadow-primary/25">
+            <button aria-label="View My Work" className="w-full sm:w-auto px-8 py-4 bg-gradient-primary rounded-full text-white font-bold text-lg hover:opacity-90 transition-all flex items-center justify-center gap-2 group shadow-lg shadow-primary/25">
               View My Work
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             
             <button 
               onClick={openResume}
+              aria-label="Download Resume"
               className="w-full sm:w-auto px-8 py-4 bg-surface dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-full text-foreground font-bold text-lg hover:bg-gray-100 dark:hover:bg-white/10 transition-all flex items-center justify-center gap-2 backdrop-blur-sm shadow-sm dark:shadow-none"
             >
               <Download className="w-5 h-5" />
@@ -49,7 +50,7 @@ const Hero = ({ openResume }) => {
       </div>
       
       {/* Decorative Grid or Elements */}
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20 pointer-events-none"></div>
     </section>
   );
 };
