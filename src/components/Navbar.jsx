@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin, Mail, Sun, Moon } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [theme, setTheme] = useState(() => {
-    if (typeof window !== 'undefined' && window.localStorage) {
-      return localStorage.getItem('theme') || 'dark';
-    }
-    return 'dark';
-  });
   
   // Theme Color State
   const [showColorPicker, setShowColorPicker] = useState(false);
@@ -34,22 +28,13 @@ const Navbar = () => {
     if (savedColor) {
       document.documentElement.style.setProperty('--primary', savedColor);
     }
+    
+    // Force Dark Mode
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
-  };
 
   const changeColor = (colorValue) => {
     document.documentElement.style.setProperty('--primary', colorValue);
@@ -82,15 +67,6 @@ const Navbar = () => {
           ))}
           <div className="h-4 w-[1px] bg-gray-300 dark:bg-white/10 mx-2"></div>
 
-          {/* Theme Toggle */}
-          <button 
-            onClick={toggleTheme} 
-            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 text-foreground transition-colors"
-            aria-label="Toggle Theme"
-          >
-            {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-          </button>
-          
           {/* Color Picker */}
           <div className="relative">
             <button 
@@ -140,16 +116,6 @@ const Navbar = () => {
               aria-label="Color Palette"
             >
               <div className="w-5 h-5 rounded-full bg-gradient-to-tr from-primary to-secondary" />
-            </button>
-            {/* Color Picker Drawer for Mobile could be here, or just reuse the logic in the menu. For now adding a simple palette row in mobile menu */}
-
-            {/* Theme Toggle Mobile */}
-            <button 
-              onClick={toggleTheme} 
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 text-foreground transition-colors"
-              aria-label="Toggle Theme"
-            >
-              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
             
           <button className="text-foreground" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
